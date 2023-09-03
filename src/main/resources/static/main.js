@@ -1,8 +1,8 @@
 let stompClient
-const SOCKET_URI = "wss://localhost:8080/websocket";
 
 $(() => {
-    initSocket();
+    let ip = prompt("What is this IP?", "127.0.0.1");
+    initSocket(ip);
 
     $("#inputContainer").on("submit", e => {
         e.preventDefault();
@@ -55,7 +55,8 @@ function addMessage(message) {
     messageConsole.scrollTop(messageConsole[0].scrollHeight);
 }
 
-function initSocket() {
+function initSocket(ip) {
+    const SOCKET_URI = `wss://${ip}:8080/websocket`;
     stompClient = new StompJs.Client({ brokerURL: SOCKET_URI });
 
     stompClient.activate();
