@@ -1,4 +1,6 @@
 src/main/resources/application.properties
+ssl-server.jks
+Oracle_Token.txt
 
 HELP.md
 .gradle

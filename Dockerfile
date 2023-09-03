@@ -10,5 +10,9 @@ COPY build.gradle build.gradle
 COPY gradlew gradlew
 COPY gradle gradle
 COPY src/ src/
+COPY ssl-server.jks ssl-server.jks
 
 RUN ./gradlew build -x processTestAot
+
+COPY build/libs/Trollian-1.0.0.jar trollian.jar
+CMD java -jar trollian.jar

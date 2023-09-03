@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'vacuousVersifer'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
 
 java {
     sourceCompatibility = '17'
@@ -32,4 +32,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
+}
+
+jar {
+    archiveBaseName = 'trollian'
 }
