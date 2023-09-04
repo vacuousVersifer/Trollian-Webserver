@@ -56,7 +56,7 @@ function addMessage(message) {
 }
 
 function initSocket(ip) {
-    const SOCKET_URI = `wss://${ip}:8080/websocket`;
+    const SOCKET_URI = `ws://${ip}/websocket`;
     stompClient = new StompJs.Client({ brokerURL: SOCKET_URI });
 
     stompClient.activate();

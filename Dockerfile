@@ -10,7 +10,6 @@ COPY build.gradle build.gradle
 COPY gradlew gradlew
 COPY gradle gradle
 COPY src/ src/
-COPY ssl-server.jks ssl-server.jks
 
 RUN ./gradlew build -x processTestAot
 
