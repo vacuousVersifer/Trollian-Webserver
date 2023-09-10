@@ -1,8 +1,7 @@
 let stompClient
 
 $(() => {
-    let ip = prompt("What is this IP?", "127.0.0.1");
-    initSocket(ip);
+    initSocket();
 
     $("#inputContainer").on("submit", e => {
         e.preventDefault();
@@ -55,8 +54,8 @@ function addMessage(message) {
     messageConsole.scrollTop(messageConsole[0].scrollHeight);
 }
 
-function initSocket(ip) {
-    const SOCKET_URI = `ws://${ip}/websocket`;
+function initSocket() {
+    const SOCKET_URI = `ws://trollian.app/websocket`;
     stompClient = new StompJs.Client({ brokerURL: SOCKET_URI });
 
     stompClient.activate();
