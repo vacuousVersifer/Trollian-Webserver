@@ -13,5 +13,5 @@ COPY src/ src/
 
 RUN ./gradlew build -x processTestAot
 
-COPY build/libs/Trollian-1.0.0.jar trollian.jar
+COPY build/libs/Trollian-1.0.2.jar trollian.jar
 CMD java -jar trollian.jar

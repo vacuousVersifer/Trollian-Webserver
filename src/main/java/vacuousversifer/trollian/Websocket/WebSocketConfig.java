@@ -1,4 +1,4 @@
-package vacuousversifer.trollian.Configs;
+package vacuousversifer.trollian.Websocket;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;

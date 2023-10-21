@@ -55,7 +55,7 @@ function addMessage(message) {
 }
 
 function initSocket() {
-    const SOCKET_URI = `ws://trollian.app/websocket`;
+    const SOCKET_URI = `ws://${window.location.host}/websocket`;
     stompClient = new StompJs.Client({ brokerURL: SOCKET_URI });
 
     stompClient.activate();
